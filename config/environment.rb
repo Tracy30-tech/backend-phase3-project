@@ -1,11 +1,9 @@
-ENV['RACK_ENV'] ||= "development"
+ENV["RACK_ENV"] ||= "development"
 
-# Require in Gems
+# Require in gems
 require 'bundler/setup'
-Bundler.require(:default, ENV['RACK_ENV'])
+Bundler.require(:default, ENV["RACK_ENV"])
 
-
-require 'json'
-
-# Require in all files in 'app' directory
+# Require in all files in app directory
 require_all 'app'
+# require_all 'app/models'
