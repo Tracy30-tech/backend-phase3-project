@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2023_02_28_210447) do
 
   create_table "properties", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
     t.string "category"
     t.string "image_url"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2023_02_28_210447) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
     t.string "phone"
   end

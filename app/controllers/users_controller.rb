@@ -11,16 +11,16 @@ class UsersController < ApplicationController
         end
 
         post "/users" do
-            username = params[:username]
+            name = params[:name]
             phone_ = params[:phone]
             email_ = params[:email]
 
-            if(username.present? && phone_.present? && email_.present?)
+            if(name.present? && phone_.present? && email_.present?)
                 check_email_exists = User.where(email: email_).count() 
                  puts("XXXXXXXXXXXXXXXXX ", check_email_exists)
 
                  if check_email_exists < 1
-                    user = User.create(username: username, email: email_, phone: phone_)
+                    user = User.create(name: name, email: email_, phone: phone_)
                     if user
                         message = {:succcess => "User created successfully!!"}
                         message.to_json

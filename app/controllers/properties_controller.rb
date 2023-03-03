@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
     # Routings
         get "/properties" do
-            properties = Property.all.order(:username)
+            properties = Property.all
             properties.to_json
         end
 
@@ -10,10 +10,33 @@ class PropertiesController < ApplicationController
             property.to_json(include: :user)
         end
 
+
+        #get all products
+# get '/properties' do
+#     properties = Property.all
+#     property.to_json(
+#         include: {
+#             reviews: {
+#                 include: :user
+#             }
+#         })
+# end
+
+# #get single product
+# get '/properties/:id' do
+#     property = Property.find(params[:id])
+#     property.to_json(
+#       include: {
+#         reviews: {
+#           include: :user
+#         }
+#       }
+#     )
+#   end
         patch '/properties/:id' do
             property = Property.find(params[:id])
             property.update(
-              username: params[:username],
+              name: params[:name],
               image_url: params[:image_url],
               category: params[:category],
               user_id: params[:user_id]
@@ -23,14 +46,14 @@ class PropertiesController < ApplicationController
     
          # post property
          post "/properties" do
-            username = params[:username]
+            name = params[:name]
             email = params[:email]
             category = params[:category]
             image_url= params[:image_url]
             user_id= params[:user_id]
     
-            if(username.present? && email.present? && category.present? && image_url.present? && user_id.present?)
-                property = Property.create(username: username, email: email, category: category,image_url:image_url, user_id: user_id)
+            if(name.present? && email.present? && category.present? && image_url.present?)
+                property = Property.create(name: name, email: email, category: category,image_url:image_url)
                 if property
                     message = {:succcess => "Property created successfully!!"}
                     message.to_json
