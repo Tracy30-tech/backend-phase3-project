@@ -31,6 +31,16 @@ class ReviewsController < ApplicationController
                 message.to_json
             end
         end
+        patch '/reviews/:id' do
+            review = Review.find(params[:id])
+            review.update(
+              comment: params[:comment],
+              star_rating: params[:star_rating],
+              property_id: params[:property_id],
+              user_id: params[:user_id]
+            )
+            review.to_json
+          end
     
         # delete review
         delete "/reviews/:id" do    

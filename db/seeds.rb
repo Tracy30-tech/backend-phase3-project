@@ -368,7 +368,7 @@ Property.create([
     star_rating: rand(1..10),
     comment: Faker::Lorem.sentence,
     property_id: rand(1...43),
-    # user_id: rand(1..32)
+    user_id: rand(1..32)
     )
 end# A review belongs to a game and a user, so we must provide those foreign keys
 
