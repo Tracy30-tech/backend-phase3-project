@@ -76,7 +76,7 @@ Property.create([
       "user_id": 15
     },
     {
-      "id": 9,
+      # "id": 9,
       "name": "Kendell Geers",
       "image_url": "https://media.timeout.com/images/105795964/image.jpg",
       "category": "Paintwork",
@@ -84,7 +84,7 @@ Property.create([
       "user_id": 1
     },
     {
-      "id": 10,
+      # "id": 10,
       "name": "Njideka Akunyili Crosby",
       "image_url": "https://www.dmarge.com/wp-content/uploads/2015/06/paris-menswear.png",
       "category": "Fashion",
