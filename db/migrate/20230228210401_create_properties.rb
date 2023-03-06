@@ -5,7 +5,8 @@ class CreateProperties < ActiveRecord::Migration[6.1]
       t.string :email
       t.string :category
       t.string :image_url
-      t.string :user_id
+      t.references :user, foreign_key: true
+      # t.string :user_id
    end
   end
 end

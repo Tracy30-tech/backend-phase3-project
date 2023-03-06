@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 2023_02_28_210447) do
     t.string "email"
     t.string "category"
     t.string "image_url"
-    t.string "user_id"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -33,4 +34,5 @@ ActiveRecord::Schema.define(version: 2023_02_28_210447) do
     t.string "phone"
   end
 
+  add_foreign_key "properties", "users"
 end

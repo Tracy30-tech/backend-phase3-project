@@ -16,7 +16,7 @@ Property.create([
       "image_url": "https://blog.artsper.com/wp-content/uploads/2018/11/Wangechi-Mutu-3.jpg",
       "category": "Paintwork",
       "email": "wangechimutu@gmail.com",
-      "user_id": 30
+      "user_id": 30      
     },
     {
       # "id": 2,
@@ -24,7 +24,7 @@ Property.create([
       "image_url": "https://propscout.co.ke/storage/properties/files/gated-communities/webp/karen-5-bedroom-house-in-a-gated-community-for-rent-mljlo.webp",
       "category": "Construction",
       "email": "anatusui8999@gmail.com",
-      "user_id": 32
+      "user_id": 32,
     },
     {
       # "id": 3,
